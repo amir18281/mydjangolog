@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from . import models
 
 # Create your views here.
@@ -9,3 +9,5 @@ def articles_list(request):
     return render(request, 'articles/articleslist.html', arge)
 
     
+def articles_detail(request,slug):
+    return HttpResponse(slug)
